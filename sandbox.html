@@ -4,11 +4,24 @@
 <head>
     <title>Sandbox</title>
     <link href="Styles/default.css" rel="stylesheet" type="text/css" />
+
     <script src="Scripts/Libraries/jquery-1.8.2.js" type="text/javascript"></script>
     <script src="Scripts/Libraries/knockout-2.1.0.js" type="text/javascript"></script>
+
+    <script src="Scripts/Models/breadCrumb.js" type="text/javascript"></script>
+    <script src="Scripts/Models/reference.js" type="text/javascript"></script>
+
+    <script src="Scripts/viewmodel.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            ko.applyBindings(window.viewmodel);
+        });
+    </script>
 </head>
 <body>
-    <header data-bind='text: header'></header>
+    <header data-bind='text: selectedItem.header'></header>
     <div id='breadCrumbContainer'></div>
     <div id='leftNavContainer'></div>
     <div id='mainContentContainer'>
