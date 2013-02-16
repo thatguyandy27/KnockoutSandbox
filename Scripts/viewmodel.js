@@ -3,7 +3,20 @@
 /// <reference path="Models/reference.js" />
 
 
-var referenceList = [new Reference('Home', 'home', function(){}) ];
+var referenceList = [new Reference('Home', 'home', function () { }, ['overview_home', 'organization_home', 'navigation_home', 
+        'layout_home', 'lists_home', 'actions_home', 'complex_home', 'input_home', 'social_home', 'mobile_home', 'finish_home']),
+    new Reference('Overview', 'overview_home', function(){} ),
+    new Reference('Organization', 'organization_home', function () { }),
+    new Reference('Navigation', 'navigation_home'),
+    new Reference('Page Layout', 'layout_home'),
+    new Reference('Lists', 'lists_home'),
+    new Reference('Actions', 'actions_home'),
+    new Reference('Complex Data', 'complex_home'),
+    new Reference('Input', 'input_home'),
+    new Reference('Social', 'social_home'),
+    new Reference('Mobile', 'mobile_home'),
+    new Reference('Finishing Touches', 'finish_home')
+];
 var initialReferenceId = 'home';
 
 (function (window, $, refrenceList, initialReferenceId) {

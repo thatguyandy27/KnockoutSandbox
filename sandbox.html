@@ -22,9 +22,17 @@
 </head>
 <body>
     <header data-bind='text: selectedItem.header'></header>
-    <div id='breadCrumbContainer'></div>
-    <div id='leftNavContainer'></div>
+    <div id='leftNavContainer'>
+        <ul data-bind="foreach: leftNavItems, style:{display: leftNavItems().length > 0 ? '':'none'}"  >
+            <li data-bind='text: header'></li>
+        </ul>
+    </div>
     <div id='mainContentContainer'>
+        <div id='breadCrumbContainer'>
+            <ul data-bind="foreach: breadCrumbs">
+                <li data-bind='text: header' />
+            </ul>
+        </div>
         <canvas id='canvas'></canvas>
     </div>
 </body>
