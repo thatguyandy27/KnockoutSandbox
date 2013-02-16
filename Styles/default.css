@@ -36,3 +36,11 @@ header
 #breadCrumbContainer
 {
 }
+
+#leftNavContainer li {
+    cursor:pointer;
+    
+}
+#breadCrumbContainer li {
+    cursor:pointer;
+}
